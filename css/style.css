@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+*{
+    padding:0;
+    margin:0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    vertical-align: middle;
+}
+
+.container{
+    width: 1170px;
+    margin:0 auto;
+}
+
+:root{
+    --ralfont:'Raleway', sans-serif;
+    --text-color:#ffffff;
+    --banneroverly:rgba(43, 46, 74, 0.95);
+    --openfont:'Open Sans', sans-serif;
+    --brandcol:#e84545;
+}
+/*===================
+common css ends
+===================*/
+
+.ralbold-13{
+    font-family: var(--ralfont);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.text-uper{
+    text-transform: uppercase;
+}
+
+.text-cap{
+    text-transform: capitalize;
+}
+/*===================
+typography css ends
+===================*/
+
+nav{
+    height: 100px;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2;
+    width:100%;
+}
+
+nav .navbar{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .navbar .logo{
+    width:200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+nav .navbar .nav-list{
+    width:600px;
+    height: 100px;
+    display: flex;
+    justify-content:flex-end;
+}
+
+nav .navbar .nav-list ul{
+    display: flex;
+    align-items: center;
+}
+
+nav .navbar .nav-list ul li{
+    padding-left: 60px;
+}
+
+nav .navbar .nav-list ul li:first-child{
+    padding:0;
+}
+
+nav .navbar .nav-list ul li a{
+    font-family: var(--ralfont);
+    font-weight: 700;
+    font-size: 13px;
+    color:rgb(255, 255, 255,0.75);
+    text-transform: uppercase;
+    transition: all linear 0.2s;
+    -webkit-transition: all linear 0.2s;
+    -moz-transition: all linear 0.2s;
+    -ms-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+}
+
+nav .navbar .nav-list ul li a:hover{
+    color:#fff;
+}
+/*===================
+nav css ends
+===================*/
+
+#banner{
+    height: 750px;
+    background-image:url(../images/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+#banner::after{
+    content: '';
+    height:inherit;
+    width:100%;
+    position:absolute;
+    top:0;
+    left: 0;
+    background-color:var(--banneroverly);
+    z-index: -1;
+}
+
+#banner .banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 750px;
+    justify-content:center;
+    text-align: center;
+}
+
+#banner .banner h2{
+    color:var(--text-color);
+    font-family: var(--openfont);
+    font-weight: 700;
+    font-size: 61px;
+    padding:0 78px;
+    line-height: 71px;
+}
+
+#banner .banner p{
+    color:var(--text-color);
+    font-family: var(--ralfont);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    padding: 0 109px;
+    margin-top:20px;
+}
+
+#banner .banner a{
+    color:var(--text-color);
+    font-family: var(--ralfont);
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 21px;
+    background-color: var(--brandcol);
+    padding: 22px 45px;
+    margin-top:70px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+/*===================
+banner css ends
+===================*/
+
+#info{
+    height: 690px;
+    background-color: #fff;
+}
+
+#info .info{
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#info .info .info-itam{
+    height:200px;
+    width:360px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+}
+
+#info .info .info-itam h3{
+    font-family: var(--ralfont);
+    font-weight: 700;
+    font-size: 14px;
+    color:#2d3033;
+    margin-top:35px;
+}
+
+#info .info .info-itam p{
+    font-family: var(--ralfont);
+    font-weight: 400;
+    font-size: 14px;
+    color:#6c7279;
+    line-height: 21px;
+    margin-top:25px;
+}
+/*===================
+info css ends
+===================*/
+
+#gallery{
+    width:100%;
+    height:700px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#gallery .gallery{
+    width:25%;
+    height:50%;
+    position:relative;
+    overflow: hidden;
+}
+
+#gallery .gallery .gallery-overlay{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:50%;
+    left:0;
+    background-color:rgba(232, 69, 69, 0.90);
+    opacity: 0;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#gallery .gallery:hover .gallery-overlay{
+    top:0;
+    opacity: 1;
+}
+
+#gallery .gallery .gallery-overlay h4{
+    font-family: var(--ralfont);
+    font-weight: 700;
+    font-size: 14px;
+    color:var(--text-color);
+}
+
+#gallery .gallery .gallery-overlay p{
+    font-family: var(--ralfont);
+    font-weight: 400;
+    font-size: 14px;
+    color:var(--text-color);
+    margin-top:10px;
+}
+
+/*===================
+gallery css ends
+===================*/
+
+
+#team{
+    width:100%;
+    height: 700px;
+}
+
+#team .team{
+    height: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#team .team .team-itam{
+    width:25%;
+    height: 585px;
+}
+
+#team .team .team-itam h3{
+    font-family: var(--ralfont);
+    font-weight: 400;
+    font-size: 22px;
+    color:#2d3033;
+    margin-top:30px;
+}
+
+#team .team .team-itam h4{
+    font-family: var(--ralfont);
+    font-weight: 400;
+    font-size: 13px;
+    color:#e84545;
+    margin-top:15px;
+}
+
+#team .team .team-itam p{
+    font-family: var(--ralfont);
+    font-weight: 400;
+    font-size: 13px;
+    color:#6c7279;
+    line-height: 21px;
+    margin-top:30px;
+    padding-right:20px;
+    box-sizing: border-box;
+}
+
+#team .team .team-itam ul{
+    display:flex;
+    margin-top:25px;
+}
+
+#team .team .team-itam ul li{
+    padding-right: 5px;
+}
+
+#team .team .team-itam ul li i{
+    width:40px;
+    height: 40px;
+    border:1px solid #dad6d6;
+    color:#dad6d6;
+    text-align: center;
+    line-height: 40px;
+}
+/*===================
+team css ends
+===================*/
+
+#full-banner{
+    background-color: #53354a;
+    height: 500px;
+    position: relative;
+    z-index:1;
+}
+
+#full-banner::after{
+    content: '';
+    position:absolute;
+    height: 100%;
+    width:50%;
+    top:0;
+    left: 0;
+    background-image: url(../images/full-banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index:-1;
+}
+
+#full-banner .full-banner{
+    height: 100%;
+    display: flex;
+    justify-content:flex-end;
+}
+
+#full-banner .full-banner .text{
+    width:500px;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#full-banner .full-banner .text q{
+    font-family: 'Cardo', serif;
+    font-style:italic ;
+    font-weight:400;
+    font-size: 36px;
+    color:#fff;
+}
+
+#full-banner .full-banner .text p{
+    font-family: var(--ralfont);
+    font-weight: 700;
+    font-size: 13px;
+    color:#fff;
+    margin-top:30px;
+}
+/*===================
+full bg css ends
+===================*/
+
+#download{
+    width:100%;
+    height: 340px;
+}
+
+#download .download{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#download .download h4{
+    font-family: var(--ralfont);
+    font-weight: 300;
+    font-size: 28px;
+    color:#2d3033;
+}
+
+#download .download p{
+    font-family: var(--ralfont);
+    font-weight:700;
+    font-size: 13px;
+    color:#2d3033;
+    margin-top:15px;
+    margin-bottom: 40px;
+}
+
+#download .download a{
+    font-family: var(--ralfont);
+    font-weight:600;
+    font-size: 13px;
+    color:#fff;
+    padding:20px 100px;
+    background-color: var(--brandcol);
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -ms-border-radius:3px;
+    -o-border-radius:3px;
+}
+/*===================
+download css ends
+===================*/
+
+
+#footer-link{
+    width:100%;
+    height:250px;
+    background-color: #3a3e64;
+}
+
+#footer-link .footer-link{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer-link .footer-link .location{
+    width:400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+#footer-link .footer-link .location h5{
+    font-family: var(--ralfont);
+    font-weight: 700;
+    font-size: 13px;
+    color:var(--text-color);
+    margin-bottom: 10px;
+}
+
+#footer-link .footer-link .location p{
+    font-family: var(--ralfont);
+    font-weight: 400;
+    font-size: 14px;
+    color:#9c9c9c;
+    line-height: 22px;
+}
+
+#footer-link .footer-link .share-link{
+    width:230px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-link .footer-link .share-link h5{
+    font-family: var(--ralfont);
+    font-weight: 700;
+    font-size: 13px;
+    color:var(--text-color);
+}
+
+#footer-link .footer-link .share-link ul{
+    display: flex;
+}
+
+#footer-link .footer-link .share-link ul li{
+    padding:0px 5px;
+}
+
+#footer-link .footer-link .share-link ul a i{
+    width: 40px;
+    height: 40px;
+    border:2px solid #fff;
+    box-sizing: border-box;
+    color:#fff;
+    text-align: center;
+    line-height: 40px;
+    margin-top:20px;
+}
+
+#footer-link .footer-link .about{
+    width:400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#footer-link .footer-link .about p{
+    font-family: var(--ralfont);
+    font-weight: 400;
+    font-size: 14px;
+    color:#9c9c9c;
+    line-height: 22px;
+    padding:0px 20px;
+}
+
+#footer-link .footer-link .about h5{
+    font-family: var(--ralfont);
+    font-weight: 700;
+    font-size: 13px;
+    color:var(--text-color);
+    margin-bottom: 10px;
+}
+/*===================
+footer link css ends
+===================*/
+
+
+#footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width:100%;
+    background-color: #313454;
+    color:#808080;
+    font-size: 14px;
+}
+
+#footer i{
+    color:var(--brandcol);
+}
+
+#footer a{
+    color:var(--text-color);
+}
+/*===================
+footer css ends
+===================*/
